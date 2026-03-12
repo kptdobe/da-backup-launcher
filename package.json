@@ -1,0 +1,27 @@
+{
+  "name": "da-backup-launcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "dev": "wrangler dev --env=dev",
+    "deploy": "wrangler deploy --env=production",
+    "start": "wrangler dev"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@adobe/eslint-config-helix": "3.0.16",
+    "eslint": "9.4.0",
+    "wrangler": "4.54.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.cjs": "eslint"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "4.20260101.0"
+  }
+}

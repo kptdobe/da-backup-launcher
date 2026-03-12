@@ -1,0 +1,20 @@
+name = "da-backup-launcher"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[triggers]
+crons = ["0 6 * * 7"]  # Every Saturday at 6 AM UTC (Cloudflare: 1=Mon..7=Sun, so 7=Sat)
+
+# Default / dev (e.g. wrangler dev, wrangler deploy without -e)
+[vars]
+ACCOUNT_ID = "852dfa4ae1b0d579df29be65b986c101"
+SOURCE_BUCKET = "acapt-content"
+DESTINATION_BUCKET = "acapt-content-backup"
+
+[env.production]
+name = "da-backup-launcher"
+
+[env.production.vars]
+ACCOUNT_ID = "852dfa4ae1b0d579df29be65b986c101"
+SOURCE_BUCKET = "aem-content"
+DESTINATION_BUCKET = "aem-content-backup"
