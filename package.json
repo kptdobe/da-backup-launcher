@@ -15,13 +15,13 @@
   "devDependencies": {
     "@adobe/eslint-config-helix": "3.0.16",
     "eslint": "9.4.0",
-    "wrangler": "4.54.0"
+    "wrangler": "4.103.0"
   },
   "lint-staged": {
     "*.js": "eslint",
     "*.cjs": "eslint"
   },
   "dependencies": {
-    "@cloudflare/workers-types": "4.20260101.0"
+    "@cloudflare/workers-types": "4.20260621.1"
   }
 }
